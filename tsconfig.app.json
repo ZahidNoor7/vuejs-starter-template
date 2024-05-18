@@ -1,0 +1,29 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  // "include": [
+  //   "env.d.ts",
+  //   "src/**/*",
+  //   "src/**/*.ts",
+  //   "src/**/*.d.ts",
+  //   "src/**/*.tsx",
+  //   "src/**/*.vue",
+  //   "vite-env.d.ts",
+  //   "utils/**/*",
+  //   "utils/functions/config.ts",
+  //   // Add other patterns if needed
+  //   "src/components/HelloWorld.vue",
+  //   "src/components/WelcomeItem.vue"
+  // ],
+  "include": ["env.d.ts", "**/*.*"], // Include all files in the project directory and its subdirectories
+
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "noEmitOnError": false, // To ignore build errors
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
